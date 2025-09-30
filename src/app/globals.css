@@ -28,20 +28,20 @@
 
 @layer components {
   .heading-1 {
-    @apply font-bold text-[32px] leading-10 tracking-[-2px]
+    @apply font-bold text-[#3F3E42] text-[32px] leading-10 tracking-[-2px]
            md:text-[64px] md:leading-tight
            xl:text-[80px] xl:leading-none xl:tracking-[-0.05em];
   }
 
   .heading-2 {
-    @apply font-bold text-[28px] tracking-[-2px]
+    @apply font-bold text-[#3F3E42] text-[28px] tracking-[-2px]
            md:text-[48px]
-           xl:text-[56px] xl:tracking-[-0.03em] leading-tight text-foreground;
+           xl:text-[56px] xl:tracking-[-0.03em] leading-tight;
   }
 
   .heading-3 {
-    @apply font-bold text-[18px] tracking-[-0.5px]
-           md:text-[20px] xl:text-[22px] leading-snug text-foreground;
+    @apply font-bold text-[#3F3E42] text-[18px] tracking-[-0.5px]
+           md:text-[20px] xl:text-[22px] leading-snug ;
   }
 
   .body-text {
@@ -57,6 +57,14 @@
   }
 }
 
+@layer utilities {
+
+  .inner-shadow-white {
+    box-shadow: inset 0px 3px 2px 0px rgba(173,173,173,0.25),
+    inset 0px -3px 2px 0px rgba(173,173,173,0.25),
+    0px 1px 4px 0px rgba(255,255,255,0.25)
+  }
+}
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
