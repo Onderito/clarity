@@ -1,8 +1,60 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Inter";
+  src: url("../app/assets/fonts/Inter_18pt-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../app/assets/fonts/Inter_18pt-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gloria Hallelujah";
+  src: url("../app/assets/fonts/GloriaHallelujah-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
+}
+
+@layer components {
+  .heading-1 {
+    @apply font-bold text-[32px] leading-10 tracking-[-2px]
+           md:text-[64px] md:leading-tight
+           xl:text-[80px] xl:leading-none xl:tracking-[-0.05em];
+  }
+
+  .heading-2 {
+    @apply font-bold text-[28px] tracking-[-2px]
+           md:text-[48px]
+           xl:text-[56px] xl:tracking-[-0.03em] leading-tight text-foreground;
+  }
+
+  .heading-3 {
+    @apply font-bold text-[18px] tracking-[-0.5px]
+           md:text-[20px] xl:text-[22px] leading-snug text-foreground;
+  }
+
+  .body-text {
+    @apply text-[14px] md:text-[16px] xl:text-[18px] 
+           tracking-[-0.01em] leading-relaxed text-gray-600;
+  }
+  .card-text {
+    @apply text-[14px] md:text-[15px] xl:text-[16px]
+           text-gray-600 leading-relaxed;
+  }
+  .container {
+    @apply container mx-auto px-4 py-10 xl:py-24 sm:px-8 md:px-12 lg:px-16 xl:px-16 2xl:px-24
+  }
 }
 
 @theme inline {
@@ -10,6 +62,8 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+   --font-manrope: "Inter", sans-serif;
+  --font-gloria: "Gloria Hallelujah", cursive;
 }
 
 @media (prefers-color-scheme: dark) {
