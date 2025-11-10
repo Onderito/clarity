@@ -1,9 +1,9 @@
 "use client";
 
-import FirstCard from "../component/feature-card/firt-card";
-import FourthCard from "../component/feature-card/fourth-card";
-import SecondCard from "../component/feature-card/second-card";
-import ThirdCard from "../component/feature-card/third-card";
+import FirstCard from "../component/features-card/first-card";
+import FourthCard from "../component/features-card/fourth-card";
+import SecondCard from "../component/features-card/second-card";
+import ThirdCard from "../component/features-card/third-card";
 
 export default function Features() {
   return (
