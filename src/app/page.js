@@ -1,17 +1,20 @@
 import Image from "next/image";
 import Hero from "./sections/hero";
 import HowItWorks from "./sections/how-it-works";
+import Features from "./sections/features";
 
 export default function Home() {
   return (
-<div>
-  <div className="container">
-    <Hero />
-  </div>
-  <div className="container">
-    <HowItWorks />
-  </div>
-</div>
-
+    <div>
+      <div className="container">
+        <Hero />
+      </div>
+      <div className="container">
+        <HowItWorks />
+      </div>
+      <div className="container">
+        <Features />
+      </div>
+    </div>
   );
 }

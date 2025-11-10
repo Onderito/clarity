@@ -1,88 +1,101 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: "Inter";
-  src: url("../app/assets/fonts/Inter_18pt-Regular.ttf");
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Inter";
+    src: url("../app/assets/fonts/Inter_18pt-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "Inter";
-  src: url("../app/assets/fonts/Inter_18pt-Bold.ttf");
-  font-weight: 700;
-  font-style: normal;
+    font-family: "Inter";
+    src: url("../app/assets/fonts/Inter_18pt-Bold.ttf");
+    font-weight: 700;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "Gloria Hallelujah";
-  src: url("../app/assets/fonts/GloriaHallelujah-Regular.ttf");
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Gloria Hallelujah";
+    src: url("../app/assets/fonts/GloriaHallelujah-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --background: #ffffff;
+    --foreground: #171717;
 }
 
 @layer components {
-  .heading-1 {
-    @apply font-bold text-[#3F3E42] text-[32px] leading-10 tracking-[-2px]
+    .heading-1 {
+        @apply font-bold text-[#3F3E42] text-[32px] leading-10 tracking-[-2px]
            md:text-[64px] md:leading-tight
            xl:text-[80px] xl:leading-none xl:tracking-[-0.05em];
-  }
+    }
 
-  .heading-2 {
-    @apply font-bold text-[#3F3E42] text-[28px] tracking-[-2px]
+    .heading-2 {
+        @apply font-bold text-[#3F3E42] text-[28px] tracking-[-2px]
            md:text-[48px]
            xl:text-[56px] xl:tracking-[-0.03em] leading-tight;
-  }
+    }
 
-  .heading-3 {
-    @apply font-bold text-[#3F3E42] text-[18px] tracking-[-0.5px]
-           md:text-[20px] xl:text-[22px] leading-snug ;
-  }
+    .heading-3 {
+        @apply font-bold text-[#3F3E42] text-[18px] tracking-[-0.5px]
+           md:text-[20px] xl:text-[22px] leading-snug;
+    }
 
-  .body-text {
-    @apply text-[14px] md:text-[16px] xl:text-[18px] 
+    .body-text {
+        @apply text-[14px] md:text-[16px] xl:text-[18px]
            tracking-[-0.01em] leading-relaxed text-gray-600;
-  }
-  .card-text {
-    @apply text-[14px] md:text-[15px] xl:text-[16px]
+    }
+    .card-text {
+        @apply text-[14px] md:text-[15px] xl:text-[16px]
            text-gray-600 leading-relaxed;
-  }
-  .container {
-    @apply container mx-auto px-4 py-10 xl:py-24 sm:px-8 md:px-12 lg:px-16 xl:px-16 2xl:px-24
-  }
+    }
+    .container {
+        @apply container mx-auto px-4 py-10 xl:py-24 sm:px-8 md:px-12 lg:px-16 xl:px-16 2xl:px-24;
+    }
 }
 
 @layer utilities {
-
-  .inner-shadow-white {
-    box-shadow: inset 0px 3px 2px 0px rgba(173,173,173,0.25),
-    inset 0px -3px 2px 0px rgba(173,173,173,0.25),
-    0px 1px 4px 0px rgba(255,255,255,0.25)
-  }
+    .inner-shadow-white {
+        box-shadow:
+            inset 0px 3px 2px 0px rgba(173, 173, 173, 0.25),
+            inset 0px -3px 2px 0px rgba(173, 173, 173, 0.25),
+            0px 1px 4px 0px rgba(255, 255, 255, 0.25);
+    }
+    .purple-glow {
+        box-shadow: 0 0 0 2px #c9cafe;
+    }
+    .inner-white {
+        box-shadow:
+            inset 0px 4px 4px 0px rgba(255, 255, 255, 0.25),
+            inset 0px -4px 4px 0px rgba(255, 255, 255, 0.25);
+    }
+    .progress-bar-shadow {
+        box-shadow:
+            inset 5px 8px 4px 0px rgba(255, 255, 255, 0.25),
+            inset 5px -8px 4px 0px rgba(255, 255, 255, 0.25);
+    }
 }
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-   --font-manrope: "Inter", sans-serif;
-  --font-gloria: "Gloria Hallelujah", cursive;
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
+    --font-manrope: "Inter", sans-serif;
+    --font-gloria: "Gloria Hallelujah", cursive;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+    }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
 }

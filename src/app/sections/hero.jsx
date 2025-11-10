@@ -5,7 +5,6 @@ import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-
 export default function Hero() {
     const imgRef = useRef(null)
     const titleRef = useRef(null)
@@ -48,7 +47,7 @@ export default function Hero() {
             scale: 0.8,
             duration: 1,
             ease: "back.out(1.7)"
-        }, "<"), 
+        }, "<0.2"), 
         tl.from([card1Ref.current, card2Ref.current, card3Ref.current, card4Ref.current] , {
             scale: 0,
             opacity: 0,
